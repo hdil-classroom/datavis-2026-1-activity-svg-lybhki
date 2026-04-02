@@ -17,6 +17,48 @@
 		}
 
 		/* YOUR CSS CODE WILL GO HERE */
+		.axis {
+			stroke: #b5b5b5;
+			stroke-width: 2;
+		}
+
+		.tick {
+			stroke: #b5b5b5;
+			stroke-width: 1.5;
+		}
+
+		.bar-green {
+			fill: #00b140;
+		}
+
+		.bar-orange {
+			fill: #ff7a00;
+		}
+
+		.bar-blue {
+			fill: #0057b8;
+		}
+
+		.label {
+			font-size: 11px;
+			fill: #444;
+		}
+
+		.station {
+			font-size: 10px;
+			fill: #444;
+			text-anchor: middle;
+		}
+
+		.axis-title {
+			font-size: 20px;
+			fill: #222;
+		}
+
+		.legend-text {
+			font-size: 12px;
+			fill: #222;
+		}
 
 
 	</style>
@@ -24,11 +66,74 @@
 
 <body>
 	<h1 id="header-title">
-		In-Class Acitivity by REPLACE_WITH_YOUR_NAME
+		In-Class Acitivity by Yubeen Lee
 	</h1>
 
 	<svg id="visualization-activity">
 		<!-- YOUR SVG CODE WILL GO HERE -->
+		 <!-- axes -->
+		<line x1="70" y1="40" x2="70" y2="400" class="axis" />
+		<line x1="70" y1="400" x2="520" y2="400" class="axis" />
+
+		<!-- y-axis ticks and labels -->
+		<line x1="65" y1="400" x2="70" y2="400" class="tick" />
+		<text x="40" y="405" class="label">0</text>
+
+		<line x1="65" y1="355" x2="70" y2="355" class="tick" />
+		<text x="20" y="360" class="label">10,000</text>
+
+		<line x1="65" y1="310" x2="70" y2="310" class="tick" />
+		<text x="20" y="315" class="label">20,000</text>
+
+		<line x1="65" y1="265" x2="70" y2="265" class="tick" />
+		<text x="20" y="270" class="label">30,000</text>
+
+		<line x1="65" y1="220" x2="70" y2="220" class="tick" />
+		<text x="20" y="225" class="label">40,000</text>
+
+		<line x1="65" y1="175" x2="70" y2="175" class="tick" />
+		<text x="20" y="180" class="label">50,000</text>
+
+		<line x1="65" y1="130" x2="70" y2="130" class="tick" />
+		<text x="20" y="135" class="label">60,000</text>
+
+		<line x1="65" y1="85" x2="70" y2="85" class="tick" />
+		<text x="20" y="90" class="label">70,000</text>
+
+		<line x1="65" y1="40" x2="70" y2="40" class="tick" />
+		<text x="20" y="45" class="label">80,000</text>
+
+		<!-- bars -->
+		<rect x="90"  y="127" width="45" height="273" class="bar-green" />
+		<rect x="165" y="163" width="45" height="237" class="bar-green" />
+		<rect x="240" y="199" width="45" height="201" class="bar-orange" />
+		<rect x="315" y="248" width="45" height="152" class="bar-blue" />
+		<rect x="390" y="257" width="45" height="143" class="bar-green" />
+		<rect x="465" y="259" width="45" height="141" class="bar-green" />
+
+		<!-- station labels -->
+		<text x="112.5" y="420" class="station">홍대입구</text>
+		<text x="187.5" y="420" class="station">잠실</text>
+		<text x="262.5" y="420" class="station">고속터미널</text>
+		<text x="337.5" y="420" class="station">서울역</text>
+		<text x="412.5" y="420" class="station">신림</text>
+		<text x="487.5" y="420" class="station">신도림</text>
+
+		<!-- axis titles -->
+		<text x="300" y="470" class="axis-title" text-anchor="middle">Station Name</text>
+		<text x="18" y="250" class="axis-title" transform="rotate(-90 18 250)">Entry Count</text>
+
+		<!-- legend -->
+		<rect x="540" y="70" width="12" height="12" class="bar-blue" />
+		<text x="558" y="80" class="legend-text">Line 1</text>
+
+		<rect x="540" y="90" width="12" height="12" class="bar-green" />
+		<text x="558" y="100" class="legend-text">Line 2</text>
+
+		<rect x="540" y="110" width="12" height="12" class="bar-orange" />
+		<text x="558" y="120" class="legend-text">Line 3</text>
+		
+		 
 
 
 	</svg>
